@@ -5,14 +5,14 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) {
-        File file_centerFile = new File("News Articles\\Center.txt");
-        File file_rightFile = new File("News Articles\\Right.txt");
-        File file_leftFile = new File("News Articles\\Left.txt");
+        File fileCenter = new File("News Articles\\Center.txt");
+        File fileRight = new File("News Articles\\Right.txt");
+        File fileLeft = new File("News Articles\\Left.txt");
 
         try (
-            BufferedReader br_center = new BufferedReader(new FileReader(file_centerFile));
-            BufferedReader br_right = new BufferedReader(new FileReader(file_rightFile));
-            BufferedReader br_left = new BufferedReader(new FileReader(file_leftFile));
+            BufferedReader br_center = new BufferedReader(new FileReader(fileCenter));
+            BufferedReader br_right = new BufferedReader(new FileReader(fileRight));
+            BufferedReader br_left = new BufferedReader(new FileReader(fileLeft));
         ) {
             // Read and print Center file
             String line;
