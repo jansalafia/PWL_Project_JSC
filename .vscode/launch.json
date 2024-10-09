@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "WordCount",
+            "request": "launch",
+            "mainClass": "Project.WordCount",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_31c12bfa"
+        },
+        {
+            "type": "java",
+            "name": "Article1",
+            "request": "launch",
+            "mainClass": "Project.Article1",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_31c12bfa"
+        },
+        {
+            "type": "java",
+            "name": "Article",
+            "request": "launch",
+            "mainClass": "Article",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_31c12bfa"
+        },
+        {
+            "type": "java",
+            "name": "WordCount",
+            "request": "launch",
+            "mainClass": "WordCount",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_31c12bfa"
+        },
+        {
+            "type": "jdk",
+            "request": "launch",
+            "name": "Launch Java App"
+        }
+    ]
+}
