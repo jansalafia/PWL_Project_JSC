@@ -55,15 +55,31 @@ public class Article1 {
     }
 
     public static void main(String[] args) throws Exception {
-        String fileName1 = "News Articles\\Center.txt";
-        String fileName2 = "News Articles\\Left.txt";
-        String fileName3 = "News Articles\\Right.txt";
-        
+        String fileName1 = "Topic 1 Articles\\Center1.txt";
+        String fileName2 = "Topic 1 Articles\\Left1.txt";
+        String fileName3 = "Topic 1 Articles\\Right1.txt";
+
+        String fileName4 = "Topic 2 Articles\\\\Center2.txt";
+        String fileName5 = "Topic 2 Articles\\\\Left2.txt";
+        String fileName6 = "Topic 2 Articles\\\\Right2.txt";
+
+        String fileName7 = "Topic 3 Articles\\\\Center3.txt";
+        String fileName8 = "Topic 3 Articles\\\\Left3.txt";
+        String fileName9 = "Topic 3 Articles\\\\Right3.txt";
+
         // Convert file content to ArrayList
         ArrayList<String> cleanArray1 = Article1.fileToArrayList(fileName1);
         ArrayList<String> cleanArray2 = Article1.fileToArrayList(fileName2);
         ArrayList<String> cleanArray3 = Article1.fileToArrayList(fileName3);
-        
+
+        ArrayList<String> cleanArray4 = Article1.fileToArrayList(fileName4);
+        ArrayList<String> cleanArray5 = Article1.fileToArrayList(fileName5);
+        ArrayList<String> cleanArray6 = Article1.fileToArrayList(fileName6);
+
+        ArrayList<String> cleanArray7 = Article1.fileToArrayList(fileName7);
+        ArrayList<String> cleanArray8 = Article1.fileToArrayList(fileName8);
+        ArrayList<String> cleanArray9 = Article1.fileToArrayList(fileName9);
+
 
     }
     

@@ -9,6 +9,20 @@
             "name": "WordCount",
             "request": "launch",
             "mainClass": "Project.WordCount",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_8b6b2f98"
+        },
+        {
+            "type": "java",
+            "name": "Article1",
+            "request": "launch",
+            "mainClass": "Project.Article1",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_8b6b2f98"
+        },
+        {
+            "type": "java",
+            "name": "WordCount",
+            "request": "launch",
+            "mainClass": "Project.WordCount",
             "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_31c12bfa"
         },
         {
