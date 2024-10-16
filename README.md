@@ -1,4 +1,4 @@
-# ProgrammingWorkshopNewsLabJanSeanCarlos
+# Programming Workshop News Lab Jan Salafia, Sean Salafia, Carlos Castillo
 
 ## Developer Contact:
 - **Jan Salafia** - jan.salafia@student.fairfield.edu
