@@ -3,12 +3,12 @@ import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Article1 {
+public class ArticleCleaner {
 
     public String Article;
     public String userInputArticle;
 
-    public Article1(String data) {
+    public ArticleCleaner(String data) {
         this.userInputArticle = data;
     }
 
@@ -20,7 +20,7 @@ public class Article1 {
 
     public static String readFileAsString(String fileName)
         throws Exception {
-        String data = "";
+        String data;
         data = new String(
             Files.readAllBytes(Paths.get(fileName)));
         return data;
@@ -46,7 +46,6 @@ public class Article1 {
         
         // Split the cleaned content into individual words and add to ArrayList
         ArrayList<String> wordList = new ArrayList<>(Arrays.asList(cleanedContent.split(" ")));
-        
         return wordList;
     }
 
@@ -59,26 +58,26 @@ public class Article1 {
         String fileName2 = "Topic 1 Articles\\Left1.txt";
         String fileName3 = "Topic 1 Articles\\Right1.txt";
 
-        String fileName4 = "Topic 2 Articles\\\\Center2.txt";
-        String fileName5 = "Topic 2 Articles\\\\Left2.txt";
-        String fileName6 = "Topic 2 Articles\\\\Right2.txt";
+        String fileName4 = "Topic 2 Articles\\Center2.txt";
+        String fileName5 = "Topic 2 Articles\\Left2.txt";
+        String fileName6 = "Topic 2 Articles\\Right2.txt";
 
-        String fileName7 = "Topic 3 Articles\\\\Center3.txt";
-        String fileName8 = "Topic 3 Articles\\\\Left3.txt";
-        String fileName9 = "Topic 3 Articles\\\\Right3.txt";
+        String fileName7 = "Topic 3 Articles\\Center3.txt";
+        String fileName8 = "Topic 3 Articles\\Left3.txt";
+        String fileName9 = "Topic 3 Articles\\Right3.txt";
 
         // Convert file content to ArrayList
-        ArrayList<String> cleanArray1 = Article1.fileToArrayList(fileName1);
-        ArrayList<String> cleanArray2 = Article1.fileToArrayList(fileName2);
-        ArrayList<String> cleanArray3 = Article1.fileToArrayList(fileName3);
+        ArrayList<String> cleanArray1 = ArticleCleaner.fileToArrayList(fileName1);
+        ArrayList<String> cleanArray2 = ArticleCleaner.fileToArrayList(fileName2);
+        ArrayList<String> cleanArray3 = ArticleCleaner.fileToArrayList(fileName3);
 
-        ArrayList<String> cleanArray4 = Article1.fileToArrayList(fileName4);
-        ArrayList<String> cleanArray5 = Article1.fileToArrayList(fileName5);
-        ArrayList<String> cleanArray6 = Article1.fileToArrayList(fileName6);
+        ArrayList<String> cleanArray4 = ArticleCleaner.fileToArrayList(fileName4);
+        ArrayList<String> cleanArray5 = ArticleCleaner.fileToArrayList(fileName5);
+        ArrayList<String> cleanArray6 = ArticleCleaner.fileToArrayList(fileName6);
 
-        ArrayList<String> cleanArray7 = Article1.fileToArrayList(fileName7);
-        ArrayList<String> cleanArray8 = Article1.fileToArrayList(fileName8);
-        ArrayList<String> cleanArray9 = Article1.fileToArrayList(fileName9);
+        ArrayList<String> cleanArray7 = ArticleCleaner.fileToArrayList(fileName7);
+        ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
+        ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
 
 
     }

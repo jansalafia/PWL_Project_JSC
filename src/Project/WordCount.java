@@ -35,18 +35,18 @@ public class WordCount {
 
         
         // Convert file content to ArrayList
-        ArrayList<String> cleanArray1 = Article1.getArticleContent(fileName1);
-        ArrayList<String> cleanArray2 = Article1.getArticleContent(fileName2);
-        ArrayList<String> cleanArray3 = Article1.getArticleContent(fileName3);
+        ArrayList<String> cleanArray1 = ArticleCleaner.getArticleContent(fileName1);
+        ArrayList<String> cleanArray2 = ArticleCleaner.getArticleContent(fileName2);
+        ArrayList<String> cleanArray3 = ArticleCleaner.getArticleContent(fileName3);
 
-        ArrayList<String> cleanArray4 = Article1.getArticleContent(fileName4);
-        ArrayList<String> cleanArray5 = Article1.getArticleContent(fileName5);
-        ArrayList<String> cleanArray6 = Article1.getArticleContent(fileName6);
+        ArrayList<String> cleanArray4 = ArticleCleaner.getArticleContent(fileName4);
+        ArrayList<String> cleanArray5 = ArticleCleaner.getArticleContent(fileName5);
+        ArrayList<String> cleanArray6 = ArticleCleaner.getArticleContent(fileName6);
 
-        ArrayList<String> cleanArray7 = Article1.getArticleContent(fileName7);
-        ArrayList<String> cleanArray8 = Article1.getArticleContent(fileName8);
-        ArrayList<String> cleanArray9 = Article1.getArticleContent(fileName9);
-        
+        ArrayList<String> cleanArray7 = ArticleCleaner.getArticleContent(fileName7);
+        ArrayList<String> cleanArray8 = ArticleCleaner.getArticleContent(fileName8);
+        ArrayList<String> cleanArray9 = ArticleCleaner.getArticleContent(fileName9);
+         
         // Print the ArrayList
         //System.out.println(cleanArray1);
         
