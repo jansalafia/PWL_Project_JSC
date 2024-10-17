@@ -46,12 +46,28 @@ Provides utilities for reading, cleaning, and processing article text.
 - **Parameters**: A string which represents the article.
 - **Returns**: A string array containing the article split into an `ArrayList` whose elements are each individual word.
 
-#### `regex(String fileName)`
-- **Purpose**: Cleans an article string by removing apostrophes, non-alphabetic characters, and extra spaces.
-  - Removes apostrophes.
-  - Replaces non-letter characters with spaces.
-  - Trims consecutive spaces to a single space.
-- **Returns**: A cleaned string.
+### Stop word sort
+
+Provides functionality to take remove stop words from a string of text
+
+#### `loadStopWords(String filePath)`
+- **Purpose**: Reads stop words from a text file and returns them as a list.
+- **Parameters**: 
+  - `String filePath`: The file path to the stop words file.
+- **Returns**: A `List<String>` containing the stop words.
+
+#### `removeStopWords(String articleContent, List<String> stopWords)`
+- **Purpose**: Removes stop words from a string of article content.
+- **Parameters**: 
+  - `String articleContent`: The content of the article.
+  - `List<String> stopWords`: The list of stop words.
+- **Returns**: A `String` with the stop words removed.
+
+#### `loadAllArticles(String directoryPath)`
+- **Purpose**: Reads all text files from a directory and returns their contents as a list of strings.
+- **Parameters**: 
+  - `String directoryPath`: The directory path containing article text files.
+- **Returns**: A `List<String>` of article content.
 
 ### WordFrequency
 Provides functionality to count and sort word frequencies in an article.
