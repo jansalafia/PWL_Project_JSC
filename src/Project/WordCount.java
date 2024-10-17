@@ -3,6 +3,8 @@ package Project;
 import java.util.ArrayList;
 
 public class WordCount {
+
+    //Method for splitting the string input
     public static int countWordsUsingSplit(String input) {
         if (input == null || input.isEmpty()) {
             return 0;
@@ -11,7 +13,7 @@ public class WordCount {
         String[] words = input.trim().split("\\s+");
         return words.length;
     }
-
+    //Method for counting words in the array
     public static int countWordsInArrayList(ArrayList<String> wordsList) {
         StringBuilder combinedString = new StringBuilder();
         for (String word : wordsList) {
@@ -19,7 +21,7 @@ public class WordCount {
         }
         return countWordsUsingSplit(combinedString.toString().trim());
     }
-
+        //Mainline
     public static void main(String[] args) throws Exception {
         String fileName1 = "Topic 1 Articles\\Center1.txt";
         String fileName2 = "Topic 1 Articles\\Left1.txt";

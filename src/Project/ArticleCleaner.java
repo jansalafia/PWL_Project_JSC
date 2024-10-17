@@ -5,19 +5,21 @@ import java.util.Arrays;
 
 public class ArticleCleaner {
 
+        //Initialize Variables
     public String Article;
     public String userInputArticle;
 
+        //Constructor
     public ArticleCleaner(String data) {
         this.userInputArticle = data;
     }
-
+        //Assign articles
     public String[] assignArticle(String article) {
         String[] splitArticle = article.split(article);
         System.out.println(Arrays.toString(splitArticle));
         return splitArticle;
     }
-
+        //Reader method
     public static String readFileAsString(String fileName)
         throws Exception {
         String data;
@@ -25,7 +27,7 @@ public class ArticleCleaner {
             Files.readAllBytes(Paths.get(fileName)));
         return data;
     }
-
+        //Method for replacing all uneccesary characters
     public String regex(String fileName) {
         String ArticleApostrophe = fileName.replaceAll("[\'’]", "");
         String ArticleLowercase = ArticleApostrophe.replaceAll("[^a-zA-Z]", " ");
@@ -33,7 +35,7 @@ public class ArticleCleaner {
         return CleanArticle;
     }
 
-    // Method to turn the file content into an ArrayList<String>
+        // Method to turn the file content into an ArrayList<String>
     public static ArrayList<String> fileToArrayList(String fileName)
         throws Exception {
         // Read file as a single string
@@ -48,7 +50,7 @@ public class ArticleCleaner {
         ArrayList<String> wordList = new ArrayList<>(Arrays.asList(cleanedContent.split(" ")));
         return wordList;
     }
-
+        //Method for getting article content
     public static ArrayList<String> getArticleContent(String fileName) throws Exception {
         return fileToArrayList(fileName);
     }
@@ -78,7 +80,6 @@ public class ArticleCleaner {
         ArrayList<String> cleanArray7 = ArticleCleaner.fileToArrayList(fileName7);
         ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
         ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
-
 
     }
     

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArticleCleaner",
+            "request": "launch",
+            "mainClass": "Project.ArticleCleaner",
+            "projectName": "ProgrammingWorkshopNewsLabJanSeanCarlos_8b6b2f98"
+        },
+        {
+            "type": "java",
             "name": "StopWordSort",
             "request": "launch",
             "mainClass": "Project.StopWordSort",
