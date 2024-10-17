@@ -27,14 +27,6 @@ public class ArticleCleaner {
             Files.readAllBytes(Paths.get(fileName)));
         return data;
     }
-        //Method for replacing all uneccesary characters
-    public String regex(String fileName) {
-        String ArticleApostrophe = fileName.replaceAll("[\'’]", "");
-        String ArticleLowercase = ArticleApostrophe.replaceAll("[^a-zA-Z]", " ");
-        String CleanArticle = ArticleLowercase.replaceAll("( )+", " ");
-        return CleanArticle;
-    }
-
         // Method to turn the file content into an ArrayList<String>
     public static ArrayList<String> fileToArrayList(String fileName)
         throws Exception {
@@ -80,7 +72,6 @@ public class ArticleCleaner {
         ArrayList<String> cleanArray7 = ArticleCleaner.fileToArrayList(fileName7);
         ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
         ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
-
     }
     
 }
