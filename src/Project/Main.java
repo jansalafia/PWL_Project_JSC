@@ -1,7 +1,10 @@
 package Project;
-
+import java.util.List;
 import java.util.ArrayList;
+
 //import java.util.Scanner;
+
+
 
 import static Project.WordCount.countWordsInArrayList;
 
@@ -80,7 +83,14 @@ public class Main {
         wordFrequency.countWordFrequencies(cleanArray9);
 
 
+        List<ArrayList<String>> allLists = new ArrayList<>();
+        allLists.add(cleanArray1);
+        allLists.add(cleanArray2);
+        allLists.add(cleanArray3);
+        
 
+    //    List<ArrayList<String>> rankedLists = rankByVocabularyRichness(allLists);
+        
 
 
 

@@ -6,17 +6,13 @@ import java.util.*;
 public class StopWordSort {
 
     // Method to read stop words from a text file and return a List of stop words
-    private static List<String> loadStopWords(String filePath) {
+    private static List<String> loadStopWords(String filePath) throws FileNotFoundException, IOException {
         List<String> stopWords = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 stopWords.add(line.trim().toLowerCase());
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: Stop words file not found: " + filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         return stopWords;
     }
