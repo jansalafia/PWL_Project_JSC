@@ -47,31 +47,5 @@ public class ArticleCleaner {
         return fileToArrayList(fileName);
     }
 
-    public static void main(String[] args) throws Exception {
-        String fileName1 = "Topic 1 Articles\\Center1.txt";
-        String fileName2 = "Topic 1 Articles\\Left1.txt";
-        String fileName3 = "Topic 1 Articles\\Right1.txt";
-
-        String fileName4 = "Topic 2 Articles\\Center2.txt";
-        String fileName5 = "Topic 2 Articles\\Left2.txt";
-        String fileName6 = "Topic 2 Articles\\Right2.txt";
-
-        String fileName7 = "Topic 3 Articles\\Center3.txt";
-        String fileName8 = "Topic 3 Articles\\Left3.txt";
-        String fileName9 = "Topic 3 Articles\\Right3.txt";
-
-        // Convert file content to ArrayList
-        ArrayList<String> cleanArray1 = ArticleCleaner.fileToArrayList(fileName1);
-        ArrayList<String> cleanArray2 = ArticleCleaner.fileToArrayList(fileName2);
-        ArrayList<String> cleanArray3 = ArticleCleaner.fileToArrayList(fileName3);
-
-        ArrayList<String> cleanArray4 = ArticleCleaner.fileToArrayList(fileName4);
-        ArrayList<String> cleanArray5 = ArticleCleaner.fileToArrayList(fileName5);
-        ArrayList<String> cleanArray6 = ArticleCleaner.fileToArrayList(fileName6);
-
-        ArrayList<String> cleanArray7 = ArticleCleaner.fileToArrayList(fileName7);
-        ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
-        ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
-    }
-    
 }
+    
