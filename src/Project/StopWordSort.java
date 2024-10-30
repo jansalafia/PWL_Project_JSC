@@ -1,90 +1,53 @@
 package Project;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class StopWordSort {
+    
+    private Set<String> stopWords;
 
-    // Method to read stop words from a text file and return a List of stop words
-    private static List<String> loadStopWords(String filePath) throws FileNotFoundException, IOException {
-        List<String> stopWords = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                stopWords.add(line.trim().toLowerCase());
-            }
-        }
-        return stopWords;
+    // Constructor: Load stop words from a specified file
+    public StopWordSort(String stopWordsFilePath) throws IOException {
+        this.stopWords = loadStopWords(stopWordsFilePath);
     }
 
-    // Method to remove stop words from the article content
-    public static String removeStopWords(String articleContent, List<String> stopWords) {
-        StringBuilder result = new StringBuilder();
-        String[] words = articleContent.split("\\s+"); 
+    // Method to load stop words from a file into a Set for fast lookup
+    private Set<String> loadStopWords(String filePath) throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get(filePath));
+        return new HashSet<>(lines);
+    }
 
+    // Method to remove stop words from a given list of words
+    public ArrayList<String> removeStopWords(ArrayList<String> words) {
+        ArrayList<String> filteredWords = new ArrayList<>();
         for (String word : words) {
-            // Check if the word is not a stop word and add it to the result
-            if (!stopWords.contains(word.toLowerCase())) {
-                result.append(word).append(" ");
+            if (!stopWords.contains(word.toLowerCase())) { 
+                filteredWords.add(word);
             }
         }
-        return result.toString().trim(); 
+        return filteredWords;
     }
 
-    // Method to read all articles from a directory and return a list of article content
-    public static List<String> loadAllArticles(String directoryPath) {
-        List<String> articles = new ArrayList<>();
-        File dir = new File(directoryPath);
+    // Main method for testing
+    public static void main(String[] args) throws Exception {
+        // Example usage
+        String stopWordsFilePath = "ListOfStopWords.txt";  // Path to stop words file
+        StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
 
-        if (dir.exists() && dir.isDirectory()) {
-            File[] files = dir.listFiles((d, name) -> name.endsWith(".txt")); 
-            if (files != null) {
-                for (File file : files) {
-                    try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                        StringBuilder articleContent = new StringBuilder();
-                        String line;
-                        while ((line = br.readLine()) != null) {
-                            articleContent.append(line).append(" ");
-                        }
-                        articles.add(articleContent.toString().trim());
-                    } catch (IOException e) {
-                        System.out.println("Error reading article file: " + file.getName());
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } else {
-            System.out.println("Directory not found: " + directoryPath);
-        }
-        return articles;
-    }
-
-    public static void main(String[] args) {
-        // File path for the ListOfStopWords.txt
-        String stopWordsFilePath = "ListOfStopWords.txt";
+        // Example article content loaded from ArticleCleaner
+        String fileName = "Topic 1 Articles\\Center1.txt";
+        ArrayList<String> cleanArray = ArticleCleaner.fileToArrayList(fileName);
         
-        // Load stop words from the file
-        List<String> stopWords = loadStopWords(stopWordsFilePath);
+        // Remove stop words from cleanArray
+        ArrayList<String> filteredArray = stopWordSort.removeStopWords(cleanArray);
         
-        // Load all articles from Topic 1, 2, and 3 directories
-        String[] articleDirectories = {
-            "Topic 1 Articles",
-            "Topic 2 Articles",
-            "Topic 3 Articles"
-        };
-
-        // Process articles from all directories
-        for (String directory : articleDirectories) {
-            List<String> articles = loadAllArticles(directory);
-            for (String article : articles) {
-                // Remove stop words from the article
-                String filteredArticle = removeStopWords(article, stopWords);
-                
-                // Output the result
-                System.out.println("Filtered Article from " + directory + ": ");
-                System.out.println(filteredArticle);
-                System.out.println("---------------------------------------");
-            }
-        }
+        System.out.println("Original Array: " + cleanArray);
+        System.out.println("Filtered Array (no stop words): " + filteredArray);
     }
 }

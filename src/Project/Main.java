@@ -83,11 +83,25 @@ public class Main {
         wordFrequency.countWordFrequencies(cleanArray9);
 
 
-        List<ArrayList<String>> allLists = new ArrayList<>();
-        allLists.add(cleanArray1);
-        allLists.add(cleanArray2);
-        allLists.add(cleanArray3);
+        // List<ArrayList<String>> allLists = new ArrayList<>();
+        // allLists.add(cleanArray1);
+        // allLists.add(cleanArray2);
+        // allLists.add(cleanArray3);
         
+            //STOP WORD SORT
+        String stopWordsFilePath = "C:\\Users\\Jan\\Documents\\GitHub\\ProgrammingWorkshopNewsLabJanSeanCarlos\\src\\Project\\ListOfStopWords";
+        StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
+
+        ArrayList<String> filteredArray1 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray2 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray3 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray4 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray5 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray6 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray7 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray8 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray9 = stopWordSort.removeStopWords(cleanArray1);
+
 
     //    List<ArrayList<String>> rankedLists = rankByVocabularyRichness(allLists);
         
