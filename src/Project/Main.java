@@ -1,11 +1,6 @@
 package Project;
-import java.util.ArrayList;
-
-//import java.util.Scanner;
-
-
-
 import static Project.WordCount.countWordsInArrayList;
+import java.util.ArrayList;
 
 
 public class Main {
@@ -39,6 +34,19 @@ public class Main {
         ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
         ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
 
+        //STOP WORD SORT
+        String stopWordsFilePath = "ListOfStopWords";
+        StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
+           
+        ArrayList<String> filteredArray1 = stopWordSort.removeStopWords(cleanArray1);
+        ArrayList<String> filteredArray2 = stopWordSort.removeStopWords(cleanArray2);
+        ArrayList<String> filteredArray3 = stopWordSort.removeStopWords(cleanArray3);
+        ArrayList<String> filteredArray4 = stopWordSort.removeStopWords(cleanArray4);
+        ArrayList<String> filteredArray5 = stopWordSort.removeStopWords(cleanArray5);
+        ArrayList<String> filteredArray6 = stopWordSort.removeStopWords(cleanArray6);
+        ArrayList<String> filteredArray7 = stopWordSort.removeStopWords(cleanArray7);
+        ArrayList<String> filteredArray8 = stopWordSort.removeStopWords(cleanArray8);
+        ArrayList<String> filteredArray9 = stopWordSort.removeStopWords(cleanArray9);
 
 
         // WORD COUNT
@@ -50,7 +58,7 @@ public class Main {
         System.out.println("Word count for Topic 2, Article 1: " + wordCount1);
         System.out.println("Word count for Topic 2, Article 2: " + wordCount2);
         System.out.println("Word count for Topic 2, Article 3: " + wordCount3);
-
+ 
 
         // Count words in all three articles for topic 2
         int wordCount4 = countWordsInArrayList(cleanArray4);
@@ -71,48 +79,38 @@ public class Main {
 
             //WORD FREQUENCY
         WordFrequency wordFrequency = new WordFrequency();
-        wordFrequency.countWordFrequencies(cleanArray1);
-        wordFrequency.countWordFrequencies(cleanArray2);
-        wordFrequency.countWordFrequencies(cleanArray3);
-        wordFrequency.countWordFrequencies(cleanArray4);
-        wordFrequency.countWordFrequencies(cleanArray5);
-        wordFrequency.countWordFrequencies(cleanArray6);
-        wordFrequency.countWordFrequencies(cleanArray7);
-        wordFrequency.countWordFrequencies(cleanArray8);
-        wordFrequency.countWordFrequencies(cleanArray9);
+        wordFrequency.countWordFrequencies(filteredArray1);
+        // wordFrequency.countWordFrequencies(filteredArray2);
+        // wordFrequency.countWordFrequencies(filteredArray3);
+        // wordFrequency.countWordFrequencies(filteredArray4);
+        // wordFrequency.countWordFrequencies(filteredArray5);
+        // wordFrequency.countWordFrequencies(filteredArray6);
+        // wordFrequency.countWordFrequencies(filteredArray7);
+        // wordFrequency.countWordFrequencies(filteredArray8);
+        // wordFrequency.countWordFrequencies(filteredArray9);
+        System.out.print("Topic 1 Aricle 1 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray1);
+        System.out.print("Topic 1 Aricle 2 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray2);
+        System.out.print("Topic 1 Aricle 3 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray3);
+        System.out.print("Topic 2 Aricle 1 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray4);
+        System.out.print("Topic 2 Aricle 2 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray5);
+        System.out.print("Topic 2 Aricle 3 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray6);
+        System.out.print("Topic 3 Aricle 1 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray7);
+        System.out.print("Topic 3 Aricle 2 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray8);
+        System.out.print("Topic 3 Aricle 3 ");
+        UniqueWordCount.countUniqueWordFrequency(filteredArray9);
 
-
-        // List<ArrayList<String>> allLists = new ArrayList<>();
-        // allLists.add(cleanArray1);
-        // allLists.add(cleanArray2);
-        // allLists.add(cleanArray3);
         
-            //STOP WORD SORT
-        String stopWordsFilePath = "C:\\Users\\Jan\\Documents\\GitHub\\ProgrammingWorkshopNewsLabJanSeanCarlos\\src\\Project\\ListOfStopWords";
-        StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
-
-        ArrayList<String> filteredArray1 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray2 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray3 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray4 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray5 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray6 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray7 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray8 = stopWordSort.removeStopWords(cleanArray1);
-        ArrayList<String> filteredArray9 = stopWordSort.removeStopWords(cleanArray1);
-
 
     //    List<ArrayList<String>> rankedLists = rankByVocabularyRichness(allLists);
         
-
-
-
-
-
-
-
-
-
 
 
 

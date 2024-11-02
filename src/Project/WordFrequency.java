@@ -52,6 +52,8 @@ public class WordFrequency {
         // Display sorted word frequencies
         for (WordCount wordCount : wordCountList) {
             System.out.println(wordCount.word + ": " + wordCount.count);
+
+
         }
     }
 
