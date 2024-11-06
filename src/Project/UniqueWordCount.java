@@ -38,4 +38,3 @@ public class UniqueWordCount {
     System.out.println("Amount of Unique Words: " + UniqueWordCount);
     }
 }
-
