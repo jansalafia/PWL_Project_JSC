@@ -2,7 +2,7 @@ package Project;
 
 import java.util.*;
 
-public class RepeatedWords {
+public class repeatedWords {
 
     public static void main(String[] args) throws Exception {
         String[] fileNames = {

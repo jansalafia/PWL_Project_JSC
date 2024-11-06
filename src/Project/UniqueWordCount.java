@@ -4,17 +4,6 @@ import java.util.ArrayList;
 
 public class UniqueWordCount {
     
-    // Helper class to store word-frequency pairs
-    class WordCount {
-        String word;
-        int count;
-
-        WordCount(String word, int count) {
-            this.word = word;
-            this.count = count;
-        }
-    }
-
     // Method to count and sort word frequencies in a cleaned article
     public static void countUniqueWordFrequency(ArrayList<String> cleanedArticle) {
         ArrayList<String> uniqueWords = new ArrayList<>();
