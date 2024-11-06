@@ -107,7 +107,13 @@ public class Main {
         System.out.print("Topic 3 Aricle 3 ");
         UniqueWordCount.countUniqueWordFrequency(filteredArray9);
 
-        
+        //Sentiment Analysis
+        Attitude.countPositiveSentiment(filteredArray1);
+
+
+
+
+
 
     //    List<ArrayList<String>> rankedLists = rankByVocabularyRichness(allLists);
         

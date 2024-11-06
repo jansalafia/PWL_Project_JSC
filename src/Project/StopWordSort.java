@@ -37,7 +37,7 @@ public class StopWordSort {
     // Main method for testing
     public static void main(String[] args) throws Exception {
         // Example usage
-        String stopWordsFilePath = "ListOfStopWords.txt";  // Path to stop words file
+        String stopWordsFilePath = "ListOfStopWords";  // Path to stop words file
         StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
 
         // Example article content loaded from ArticleCleaner
