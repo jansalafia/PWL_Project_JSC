@@ -51,4 +51,3 @@ public class StopWordSort {
         System.out.println("Filtered Array (no stop words): " + filteredArray);
     }
 }
-  
