@@ -78,3 +78,4 @@ public class WordCount {
         System.out.println("Word count for Topic 3, Article 3: " + wordCount9);
     }
 }
+  

@@ -35,7 +35,8 @@ public class Main {
         ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
 
         //STOP WORD SORT
-        String stopWordsFilePath = "ListOfStopWords";
+        
+        String stopWordsFilePath = "ListOfStopWords"; 
         StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
            
         ArrayList<String> filteredArray1 = stopWordSort.removeStopWords(cleanArray1);
