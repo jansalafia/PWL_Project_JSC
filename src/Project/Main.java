@@ -77,35 +77,59 @@ public class Main {
         System.out.println("Word count for Topic 3, Article 3: " + wordCount9);
 
 
-            //WORD FREQUENCY
+        //WORD FREQUENCY
         WordFrequency wordFrequency = new WordFrequency();
         wordFrequency.countWordFrequencies(filteredArray1);
-        // wordFrequency.countWordFrequencies(filteredArray2);
-        // wordFrequency.countWordFrequencies(filteredArray3);
-        // wordFrequency.countWordFrequencies(filteredArray4);
-        // wordFrequency.countWordFrequencies(filteredArray5);
-        // wordFrequency.countWordFrequencies(filteredArray6);
-        // wordFrequency.countWordFrequencies(filteredArray7);
-        // wordFrequency.countWordFrequencies(filteredArray8);
-        // wordFrequency.countWordFrequencies(filteredArray9);
-        System.out.print("Topic 1 Aricle 1 ");
+        wordFrequency.countWordFrequencies(filteredArray2);
+        wordFrequency.countWordFrequencies(filteredArray3);
+        wordFrequency.countWordFrequencies(filteredArray4);
+        wordFrequency.countWordFrequencies(filteredArray5);
+        wordFrequency.countWordFrequencies(filteredArray6);
+        wordFrequency.countWordFrequencies(filteredArray7);
+        wordFrequency.countWordFrequencies(filteredArray8);
+        wordFrequency.countWordFrequencies(filteredArray9);
+        
+        
+        //Rich Word Count
+        System.out.print("Rich Word Count for Topic 1 Aricle 1 ");
         RichWordCount.countUniqueWordFrequency(filteredArray1);
-        System.out.print("Topic 1 Aricle 2 ");
+        System.out.print("Rich Word Count for Topic 1 Aricle 2 ");
         RichWordCount.countUniqueWordFrequency(filteredArray2);
-        System.out.print("Topic 1 Aricle 3 ");
+        System.out.print("Rich Word Count for Topic 1 Aricle 3 ");
         RichWordCount.countUniqueWordFrequency(filteredArray3);
-        System.out.print("Topic 2 Aricle 1 ");
+        System.out.print("Rich Word Count for Topic 2 Aricle 1 ");
         RichWordCount.countUniqueWordFrequency(filteredArray4);
-        System.out.print("Topic 2 Aricle 2 ");
+        System.out.print("Rich Word Count for Topic 2 Aricle 2 ");
         RichWordCount.countUniqueWordFrequency(filteredArray5);
-        System.out.print("Topic 2 Aricle 3 ");
+        System.out.print("Rich Word Count for Topic 2 Aricle 3 ");
         RichWordCount.countUniqueWordFrequency(filteredArray6);
-        System.out.print("Topic 3 Aricle 1 ");
+        System.out.print("Rich Word Count for Topic 3 Aricle 1 ");
         RichWordCount.countUniqueWordFrequency(filteredArray7);
-        System.out.print("Topic 3 Aricle 2 ");
+        System.out.print("Rich Word Count for Topic 3 Aricle 2 ");
         RichWordCount.countUniqueWordFrequency(filteredArray8);
-        System.out.print("Topic 3 Aricle 3 ");
+        System.out.print("Rich Word Count for Topic 3 Aricle 3 ");
         RichWordCount.countUniqueWordFrequency(filteredArray9);
+
+        //Most Repeated Words
+        System.out.print("10 Most Repeated Words for Topic 1 Article 1");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray1));
+        System.out.print("10 Most Repeated Words for Topic 1 Article 2");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray2));
+        System.out.print("10 Most Repeated Words for Topic 1 Article 3");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray3));
+        System.out.print("10 Most Repeated Words for Topic 2 Article 1");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray4));
+        System.out.print("10 Most Repeated Words for Topic 2 Article 2");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray5));
+        System.out.print("10 Most Repeated Words for Topic 2 Article 3");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray6));
+        System.out.print("10 Most Repeated Words for Topic 3 Article 1");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray7));
+        System.out.print("10 Most Repeated Words for Topic 3 Article 2");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray8));
+        System.out.print("10 Most Repeated Words for Topic 3 Article 3");
+        System.out.println(repeatedWords.findMostUsedWords(filteredArray9));
+
 
         //Sentiment Analysis
         Attitude attitudeAnalyzer = new Attitude();
