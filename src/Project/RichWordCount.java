@@ -2,7 +2,7 @@ package Project;
 
 import java.util.ArrayList;
 
-public class UniqueWordCount {
+public class RichWordCount {
     
     // Method to count and sort word frequencies in a cleaned article
     public static void countUniqueWordFrequency(ArrayList<String> cleanedArticle) {

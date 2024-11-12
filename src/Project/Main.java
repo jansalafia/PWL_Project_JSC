@@ -89,23 +89,23 @@ public class Main {
         // wordFrequency.countWordFrequencies(filteredArray8);
         // wordFrequency.countWordFrequencies(filteredArray9);
         System.out.print("Topic 1 Aricle 1 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray1);
+        RichWordCount.countUniqueWordFrequency(filteredArray1);
         System.out.print("Topic 1 Aricle 2 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray2);
+        RichWordCount.countUniqueWordFrequency(filteredArray2);
         System.out.print("Topic 1 Aricle 3 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray3);
+        RichWordCount.countUniqueWordFrequency(filteredArray3);
         System.out.print("Topic 2 Aricle 1 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray4);
+        RichWordCount.countUniqueWordFrequency(filteredArray4);
         System.out.print("Topic 2 Aricle 2 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray5);
+        RichWordCount.countUniqueWordFrequency(filteredArray5);
         System.out.print("Topic 2 Aricle 3 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray6);
+        RichWordCount.countUniqueWordFrequency(filteredArray6);
         System.out.print("Topic 3 Aricle 1 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray7);
+        RichWordCount.countUniqueWordFrequency(filteredArray7);
         System.out.print("Topic 3 Aricle 2 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray8);
+        RichWordCount.countUniqueWordFrequency(filteredArray8);
         System.out.print("Topic 3 Aricle 3 ");
-        UniqueWordCount.countUniqueWordFrequency(filteredArray9);
+        RichWordCount.countUniqueWordFrequency(filteredArray9);
 
         //Sentiment Analysis
         Attitude attitudeAnalyzer = new Attitude();

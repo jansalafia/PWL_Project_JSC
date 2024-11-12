@@ -32,23 +32,5 @@ public class StopWordSort {
             }
         }
         return filteredWords;
-    }
-
-    // Main method for testing
-    public static void main(String[] args) throws Exception {
-        // Example usage
-        String stopWordsFilePath = "ListOfStopWords";  // Path to stop words file
-        StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
-
-        // Example article content loaded from ArticleCleaner
-        String fileName = "Topic 1 Articles\\Center1.txt";
-        ArrayList<String> cleanArray = ArticleCleaner.fileToArrayList(fileName);
-        
-        // Remove stop words from cleanArray
-        ArrayList<String> filteredArray = stopWordSort.removeStopWords(cleanArray);
-        
-        System.out.println("Original Array: " + cleanArray);
-        System.out.println("Filtered Array (no stop words): " + filteredArray);
-    }
-}
-
+    }}
+    

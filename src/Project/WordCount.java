@@ -49,8 +49,6 @@ public class WordCount {
         ArrayList<String> cleanArray8 = ArticleCleaner.getArticleContent(fileName8);
         ArrayList<String> cleanArray9 = ArticleCleaner.getArticleContent(fileName9);
          
-        // Print the ArrayList
-        //System.out.println(cleanArray1);
         
         // Count words in all three articles for topic 1
         int wordCount1 = countWordsInArrayList(cleanArray1);
@@ -59,7 +57,6 @@ public class WordCount {
         System.out.println("Word count for Topic 2, Article 1: " + wordCount1);
         System.out.println("Word count for Topic 2, Article 2: " + wordCount2);
         System.out.println("Word count for Topic 2, Article 3: " + wordCount3);
-
 
         // Count words in all three articles for topic 2
         int wordCount4 = countWordsInArrayList(cleanArray4);
