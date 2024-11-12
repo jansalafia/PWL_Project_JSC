@@ -108,7 +108,35 @@ public class Main {
         UniqueWordCount.countUniqueWordFrequency(filteredArray9);
 
         //Sentiment Analysis
-        Attitude.countPositiveSentiment(filteredArray1);
+        Attitude attitudeAnalyzer = new Attitude();
+
+        String overallSentiment1 = attitudeAnalyzer.analyzeSentiment(filteredArray1);
+        System.out.println("Topic 1, Article 1 Overall Sentiment: " + overallSentiment1);
+
+        String overallSentiment2 = attitudeAnalyzer.analyzeSentiment(filteredArray2);
+        System.out.println("Topic 1, Article 2 Overall Sentiment: " + overallSentiment2);
+
+        String overallSentiment3 = attitudeAnalyzer.analyzeSentiment(filteredArray3);
+        System.out.println("Topic 1, Article 3 Overall Sentiment: " + overallSentiment3);
+
+        String overallSentiment4 = attitudeAnalyzer.analyzeSentiment(filteredArray4);
+        System.out.println("Topic 2, Article 1 Overall Sentiment: " + overallSentiment4);
+
+        String overallSentiment5 = attitudeAnalyzer.analyzeSentiment(filteredArray5);
+        System.out.println("Topic 2, Article 2 Overall Sentiment: " + overallSentiment5);
+
+        String overallSentiment6 = attitudeAnalyzer.analyzeSentiment(filteredArray6);
+        System.out.println("Topic 2, Article 3 Overall Sentiment: " + overallSentiment6);
+
+        String overallSentiment7 = attitudeAnalyzer.analyzeSentiment(filteredArray7);
+        System.out.println("Topic 3, Article 1 Overall Sentiment: " + overallSentiment7);
+
+        String overallSentiment8 = attitudeAnalyzer.analyzeSentiment(filteredArray8);
+        System.out.println("Topic 3, Article 2 Overall Sentiment: " + overallSentiment8);
+
+        String overallSentiment9 = attitudeAnalyzer.analyzeSentiment(filteredArray9);
+        System.out.println("Topic 3, Article 3 Overall Sentiment: " + overallSentiment9);
+
 
 
 
