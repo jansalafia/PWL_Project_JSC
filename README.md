@@ -81,7 +81,65 @@ Provides functionality to count and sort word frequencies in an article.
   - If a word is already present, it increments its corresponding count.
 - **Returns**: The method handles the counting process internally, likely for further processing or display.
 
+### RichWordCount
+Provides functionality to count word frequencies in a cleaned article.
 
+#### `countUniqueWordFrequency(ArrayList<String> cleanedArticle)`
+- **Purpose**: Counts the frequency of each unique word in the `cleanedArticle` list and outputs the total number of unique words.
+- **Parameters**: 
+  - `cleanedArticle`: An `ArrayList<String>` containing words from a preprocessed article.
+- **Process**:
+  - Uses two lists, `uniqueWords` for storing unique words and `wordCounts` for tracking their frequencies.
+  - Iterates over `cleanedArticle`. If a word is not in `uniqueWords`, it adds the word and initializes its count to 1 in `wordCounts`. If the word is already present, it increments the corresponding count.
+  - Calculates the total count of unique words by summing all entries in `wordCounts`.
+- **Returns**: Total number of unique words in `cleanedArticle`. 
+
+### RepeatedWords
+Provides functionality to identify the most frequently used words in a given list.
+
+#### `findMostUsedWords(ArrayList<String> words)`
+- **Purpose**: Finds and returns the top 10 most frequently used words in the provided list.
+- **Parameters**: 
+  - `words`: An `ArrayList<String>` containing words to analyze for frequency.
+- **Process**:
+  - Creates a `Map<String, Integer> wordCountMap` to store each word and its frequency count.
+  - Iterates over `words`, updating the count for each word in `wordCountMap`.
+  - Converts `wordCountMap` entries to a list, `sortedEntries`, and sorts it by frequency in descending order.
+  - Collects the top 10 most frequently used words from `sortedEntries` and adds them to `mostUsedWords`.
+- **Returns**: A `List<String>` of the 10 most frequently used words in descending order of frequency.
+
+
+### Attitude
+A Java class for analyzing the sentiment of text based on predefined sets of positive and negative words.
+
+#### `loadWordsFromFile(String filePath)`
+- **Purpose**: Reads words from a file and returns them as a `Set<String>`.
+- **Parameters**: 
+  - `filePath`: The path to the file containing the list of words.
+- **Returns**: A `Set<String>` with words from the file, eliminating duplicates.
+
+#### `countPositiveSentiment(ArrayList<String> words)`
+- **Purpose**: Counts the number of positive words in a list.
+- **Parameters**: 
+  - `words`: An `ArrayList<String>` containing words to analyze.
+- **Process**: Iterates over `words`, checking each word against `positiveWords`.
+- **Returns**: An integer representing the positive word count, also printed to the console.
+
+#### `countNegativeSentiment(ArrayList<String> words)`
+- **Purpose**: Counts the number of negative words in a list.
+- **Parameters**: 
+  - `words`: An `ArrayList<String>` containing words to analyze.
+- **Process**: Iterates over `words`, checking each word against `negativeWords`.
+- **Returns**: An integer representing the negative word count, also printed to the console.
+
+#### `analyzeSentiment(ArrayList<String> words)`
+- **Purpose**: Analyzes the sentiment of the text by comparing positive and negative word counts.
+- **Parameters**: 
+  - `words`: An `ArrayList<String>` containing words to analyze.
+- **Process**: Calls `countPositiveSentiment` and `countNegativeSentiment`, comparing their results.
+- **Returns**: A `String` indicating overall sentiment, either `"Positive"` or `"Negative"`.
+
+ 
 
 ## How to Run:
 1. Add your article text files into the respective `Topic` folders within the project directory.
