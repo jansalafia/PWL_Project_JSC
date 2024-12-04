@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Project.Main",
+            "projectName": "PWL_Project_JSC_a0daa07c"
+        },
+        {
+            "type": "java",
             "name": "StopWordSort",
             "request": "launch",
             "mainClass": "Project.StopWordSort",

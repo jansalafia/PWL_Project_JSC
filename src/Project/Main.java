@@ -61,107 +61,17 @@ public class Main {
         ArrayList<String> filteredArrayCustom3 = stopWordSort.removeStopWords(cleanArrayCustom1);
 
 
-
-        // WORD COUNT
-
-        // Count words in all three articles for topic 1
-        // int wordCount1 = countWordsInArrayList(cleanArray1);
-        // int wordCount2 = countWordsInArrayList(cleanArray2);
-        // int wordCount3 = countWordsInArrayList(cleanArray3);
-        // System.out.println("Word count for Topic 1, Article 1: " + wordCount1);
-        // System.out.println("Word count for Topic 1, Article 2: " + wordCount2);
-        // System.out.println("Word count for Topic 1, Article 3: " + wordCount3);
- 
-
-        // // Count words in all three articles for topic 2
-        // int wordCount4 = countWordsInArrayList(cleanArray4);
-        // int wordCount5 = countWordsInArrayList(cleanArray5);
-        // int wordCount6 = countWordsInArrayList(cleanArray6);
-        // System.out.println("Word count for Topic 2, Article 1: " + wordCount4);
-        // System.out.println("Word count for Topic 2, Article 2: " + wordCount5);
-        // System.out.println("Word count for Topic 2, Article 3: " + wordCount6);
-
-        // // Count words in all three articles for topic 3
-        // int wordCount7 = countWordsInArrayList(cleanArray7);
-        // int wordCount8 = countWordsInArrayList(cleanArray8);
-        // int wordCount9 = countWordsInArrayList(cleanArray9);
-        // System.out.println("Word count for Topic 3, Article 1: " + wordCount7);
-        // System.out.println("Word count for Topic 3, Article 2: " + wordCount8);
-        // System.out.println("Word count for Topic 3, Article 3: " + wordCount9);
-
-
         // //WORD FREQUENCY
         WordFrequency wordFrequency = new WordFrequency();
-        // wordFrequency.countWordFrequencies(filteredArray1);
-        // wordFrequency.countWordFrequencies(filteredArray2);
-        // wordFrequency.countWordFrequencies(filteredArray3);
-        // wordFrequency.countWordFrequencies(filteredArray4);
-        // wordFrequency.countWordFrequencies(filteredArray5);
-        // wordFrequency.countWordFrequencies(filteredArray6);
-        // wordFrequency.countWordFrequencies(filteredArray7);
-        // wordFrequency.countWordFrequencies(filteredArray8);
-        // wordFrequency.countWordFrequencies(filteredArray9);
         
-        
-        // //Rich Word Count
-
-
-        // //Most Repeated Words
-        // System.out.print("10 Most Repeated Words for Topic 1 Article 1");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray1));
-        // System.out.print("10 Most Repeated Words for Topic 1 Article 2");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray2));
-        // System.out.print("10 Most Repeated Words for Topic 1 Article 3");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray3));
-        // System.out.print("10 Most Repeated Words for Topic 2 Article 1");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray4));
-        // System.out.print("10 Most Repeated Words for Topic 2 Article 2");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray5));
-        // System.out.print("10 Most Repeated Words for Topic 2 Article 3");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray6));
-        // System.out.print("10 Most Repeated Words for Topic 3 Article 1");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray7));
-        // System.out.print("10 Most Repeated Words for Topic 3 Article 2");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray8));
-        // System.out.print("10 Most Repeated Words for Topic 3 Article 3");
-        // System.out.println(repeatedWords.findMostUsedWords(filteredArray9));
-
-
         // //Sentiment Analysis
         Attitude attitudeAnalyzer = new Attitude();
 
-        // String overallSentiment1 = attitudeAnalyzer.analyzeSentiment(filteredArray1);
-        // System.out.println("Topic 1, Article 1 Overall Sentiment: " + overallSentiment1);
-
-        // String overallSentiment2 = attitudeAnalyzer.analyzeSentiment(filteredArray2);
-        // System.out.println("Topic 1, Article 2 Overall Sentiment: " + overallSentiment2);
-
-        // String overallSentiment3 = attitudeAnalyzer.analyzeSentiment(filteredArray3);
-        // System.out.println("Topic 1, Article 3 Overall Sentiment: " + overallSentiment3);
-
-        // String overallSentiment4 = attitudeAnalyzer.analyzeSentiment(filteredArray4);
-        // System.out.println("Topic 2, Article 1 Overall Sentiment: " + overallSentiment4);
-
-        // String overallSentiment5 = attitudeAnalyzer.analyzeSentiment(filteredArray5);
-        // System.out.println("Topic 2, Article 2 Overall Sentiment: " + overallSentiment5);
-
-        // String overallSentiment6 = attitudeAnalyzer.analyzeSentiment(filteredArray6);
-        // System.out.println("Topic 2, Article 3 Overall Sentiment: " + overallSentiment6);
-
-        // String overallSentiment7 = attitudeAnalyzer.analyzeSentiment(filteredArray7);
-        // System.out.println("Topic 3, Article 1 Overall Sentiment: " + overallSentiment7);
-
-        // String overallSentiment8 = attitudeAnalyzer.analyzeSentiment(filteredArray8);
-        // System.out.println("Topic 3, Article 2 Overall Sentiment: " + overallSentiment8);
-
-        // String overallSentiment9 = attitudeAnalyzer.analyzeSentiment(filteredArray9);
-        // System.out.println("Topic 3, Article 3 Overall Sentiment: " + overallSentiment9);
 
 
-
+        
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
-
 
         System.out.println("------------------------------------------------------");
         System.out.println("Welcome to our Article Comperator!");
