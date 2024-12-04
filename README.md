@@ -153,4 +153,5 @@ A Java class for analyzing the sentiment of text based on predefined sets of pos
 
 ## How to Run:
 1. Add your article text files into the respective `Topic` folders within the project directory.
-2. Execute the main program. It will automatically load the articles, remove stop words, and analyze word frequencies for comparison.
+2. Execute the main program. It will automatically preprocess the articles (the load the articles, assign them to ArrayList of strings, remove stop words)
+3. Use number keys to navigate the GUI to select topics and functions.
