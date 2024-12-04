@@ -53,7 +53,8 @@ public class WordFrequency {
         for (WordCount wordCount : wordCountList) {
             System.out.println(wordCount.word + ": " + wordCount.count);
 
-
         }
+        System.out.println("--------------------------------------------------------------------");
+
     }
 }

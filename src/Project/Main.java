@@ -2,7 +2,6 @@ package Project;
 import static Project.WordCount.countWordsInArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.nio.file.*;
 
 
 public class Main {
@@ -22,6 +21,10 @@ public class Main {
         String fileName8 = "Topic 3 Articles\\Left3.txt";
         String fileName9 = "Topic 3 Articles\\Right3.txt";
 
+        String fileNameCustom1 = "Custom Articles\\CustomArticle1.txt";
+        String fileNameCustom2 = "Custom Articles\\CustomArticle2.txt";
+        String fileNameCustom3 = "Custom Articles\\CustomArticle3.txt";
+
 
         // Convert file content to ArrayList
         ArrayList<String> cleanArray1 = ArticleCleaner.fileToArrayList(fileName1);
@@ -36,6 +39,10 @@ public class Main {
         ArrayList<String> cleanArray8 = ArticleCleaner.fileToArrayList(fileName8);
         ArrayList<String> cleanArray9 = ArticleCleaner.fileToArrayList(fileName9);
 
+        ArrayList<String> cleanArrayCustom1 = ArticleCleaner.fileToArrayList(fileNameCustom1);
+        ArrayList<String> cleanArrayCustom2 = ArticleCleaner.fileToArrayList(fileNameCustom2);
+        ArrayList<String> cleanArrayCustom3 = ArticleCleaner.fileToArrayList(fileNameCustom3);
+
         //STOP WORD SORT
         String stopWordsFilePath = "ListOfStopWords";
         StopWordSort stopWordSort = new StopWordSort(stopWordsFilePath);
@@ -49,6 +56,10 @@ public class Main {
         ArrayList<String> filteredArray7 = stopWordSort.removeStopWords(cleanArray7);
         ArrayList<String> filteredArray8 = stopWordSort.removeStopWords(cleanArray8);
         ArrayList<String> filteredArray9 = stopWordSort.removeStopWords(cleanArray9);
+        ArrayList<String> filteredArrayCustom1 = stopWordSort.removeStopWords(cleanArrayCustom1);
+        ArrayList<String> filteredArrayCustom2 = stopWordSort.removeStopWords(cleanArrayCustom1);
+        ArrayList<String> filteredArrayCustom3 = stopWordSort.removeStopWords(cleanArrayCustom1);
+
 
 
         // WORD COUNT
@@ -152,17 +163,19 @@ public class Main {
         boolean exit = false;
 
 
-
+        System.out.println("------------------------------------------------------");
+        System.out.println("Welcome to our Article Comperator!");
+        System.out.println("There should be three topic folders, each with three articles inside of them!");
         
         while (!exit) {
             System.out.println("------------------------------------------------------");
-            System.out.println("Welcome to our Article Comperator!");
-            System.out.println("There should be three topic folders, each with three articles inside of them!");
+            System.out.println("");
+            System.out.println("");
             System.out.println("Use the number keys to navigate the CLI");
             System.out.println("");
             System.out.println("1: Topic 1 (Middle East Conflict)");
-            System.out.println("2: Topic 2 ()");
-            System.out.println("3: Topic 3 ()");
+            System.out.println("2: Topic 2 (Interest Rate Cuts)");
+            System.out.println("3: Topic 3 (Election)");
             System.out.println("4: Topic 4 (Custom Topic)");
             System.out.println("5: Exit");
             System.out.print("Your Input: ");
@@ -417,8 +430,85 @@ public class Main {
 
         
                 case 4:
-                    System.out.println("You have selected to add your own topic");
-                    break;
+                System.out.println("------------------------------------------------------");
+                System.out.println("You have selected Custom Topic");
+                System.out.println("Select the option you want: ");
+                System.out.println("1: Word Count");
+                System.out.println("2: Word Frequency");
+                System.out.println("3: Rich Word Count");
+                System.out.println("4: List of Repeated Words");
+                System.out.println("5: Sentiment Analysis");
+                System.out.println("6: Exit");
+                System.out.print("Your Input: ");
+    
+                int topic4Choice = scanner.nextInt();
+
+                switch (topic4Choice) {
+                    case 1:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("You have chosen to see the word count of Custom Articles");
+                        int wordCountCustom1 = countWordsInArrayList(cleanArrayCustom1);
+                        int wordCountCustom2 = countWordsInArrayList(cleanArrayCustom2);
+                        int wordCountCustom3 = countWordsInArrayList(cleanArrayCustom3);
+                        System.out.println("Word count for Custom Topic, Article 1: " + wordCountCustom1);
+                        System.out.println("Word count for Custom Topic, Article 2: " + wordCountCustom2);
+                        System.out.println("Word count for Custom Topic, Article 3: " + wordCountCustom3);
+                        break;
+
+                        
+                    case 2:
+                    System.out.println("------------------------------------------------------");
+                        System.out.println("You have chosen to see the word frequency of Custom Articles");
+                        wordFrequency.countWordFrequencies(filteredArrayCustom1);
+                        wordFrequency.countWordFrequencies(filteredArrayCustom2);
+                        wordFrequency.countWordFrequencies(filteredArrayCustom3);
+                        break;
+                        
+                        
+                    case 3:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("You have chosen to see the rich word count for Custom Articles");
+                        System.out.print("Custom Articles: Article 1 ");
+                        RichWordCount.countUniqueWordFrequency(filteredArrayCustom1);
+                        System.out.print("Custom Articles: Article 2 ");
+                        RichWordCount.countUniqueWordFrequency(filteredArrayCustom1);
+                        System.out.print("Custom Articles: Article 3 ");
+                        RichWordCount.countUniqueWordFrequency(filteredArrayCustom1);
+                        break;
+                        
+                    case 4:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("You have chosen to see the list of repeated words for Custom Articles");
+                        System.out.print("10 Most Repeated Words for Custom Articles: Article 1 ");
+                        System.out.println(repeatedWords.findMostUsedWords(filteredArrayCustom1));
+                        System.out.print("10 Most Repeated Words for Custom Articles: Article 2 ");
+                        System.out.println(repeatedWords.findMostUsedWords(filteredArrayCustom2));
+                        System.out.print("10 Most Repeated Words for Custom Articles: Article 3 ");
+                        System.out.println(repeatedWords.findMostUsedWords(filteredArrayCustom3));
+                        break;
+
+                    case 5:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("You have chosen to see the sentiment analysis for Custom Articles");
+                        String overallSentimentCustom1 = attitudeAnalyzer.analyzeSentiment(filteredArrayCustom1);
+                        System.out.println("Custom Articles, Article 1 Overall Sentiment: " + overallSentimentCustom1);
+
+                        String overallSentimentCustom2 = attitudeAnalyzer.analyzeSentiment(filteredArrayCustom2);
+                        System.out.println("Custom Articles, Article 2 Overall Sentiment: " + overallSentimentCustom2);
+
+                        String overallSentimentCustom3 = attitudeAnalyzer.analyzeSentiment(filteredArrayCustom3);
+                        System.out.println("Custom Articles, Article 3 Overall Sentiment: " + overallSentimentCustom3);
+                        break;
+
+                    case 6:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("Exiting Custom Articles");
+                        break;
+                    default:
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("Invalid option. Please try again.");
+                }
+                break;
         
                 case 5:
                 System.out.println("Exiting program");
