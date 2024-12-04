@@ -17,6 +17,16 @@
 ### Main
 Combines methods from all files and performs analysis on input articles.
 
+-Assigns all filepaths of articles to variables
+-Uses `fileToArrayList(filepath)` to convert the text file to an clean array of strings (no punctuation) and assigns it to variable `cleanArray#`.
+-Uses `removeStopWords(cleanArray#)` to remove all stop words from all files.
+-Preprocessing completed, GUI printed into console and switchcase opened, listening for user input.
+-Prompts user to select which which article topic they want to explore
+-Prompts user to select what function they want to use on the article
+-GUI continues to offer choices until user selects Exit Program.
+
+
+
 ### WordCount
 Provides methods to count words from input strings.
 
