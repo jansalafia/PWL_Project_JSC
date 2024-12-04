@@ -10,6 +10,12 @@ import java.util.Set;
 
 public class Attitude {
 
+
+    final String ANSI_GREEN = "\u001B[32m";
+    final String ANSI_RESET = "\u001B[0m";
+    final String ANSI_RED = "\u001B[31m";
+
+    
     private static Set<String> positiveWords;
     private static Set<String> negativeWords;
 
@@ -65,10 +71,10 @@ public class Attitude {
 
         // Determine overall sentiment and return as string
         if (positiveCount > negativeCount) {
-            return "Positive";
+            return ANSI_GREEN + "Positive" + ANSI_RESET;
         }
         else {
-            return "Negative";
+            return ANSI_RED + "Negative" + ANSI_RESET;
         }
     }
 }

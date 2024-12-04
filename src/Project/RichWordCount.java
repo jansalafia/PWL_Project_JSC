@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 public class RichWordCount {
     
+
+    final static String ANSI_RESET = "\u001B[0m";
+    final static String ANSI_GREEN = "\u001B[32m";
+    final static String ANSI_YELLOW = "\u001B[33m";
+
+
     // Method to count and sort word frequencies in a cleaned article
     public static void countUniqueWordFrequency(ArrayList<String> cleanedArticle) {
         ArrayList<String> uniqueWords = new ArrayList<>();
@@ -24,6 +30,6 @@ public class RichWordCount {
 
     int UniqueWordCount = wordCounts.stream()
     .reduce(0, (accumulator,number) -> accumulator + number);
-    System.out.println("Amount of Unique Words: " + UniqueWordCount);
+    System.out.println(ANSI_GREEN + "Amount of Unique Words: " + ANSI_YELLOW + UniqueWordCount + ANSI_RESET);
     }
 }

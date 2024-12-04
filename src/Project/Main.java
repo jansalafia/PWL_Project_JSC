@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
+
 public class Main {
     public static void main(String[] args) throws Exception {
 
+
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_WHITE = "\u001B[37m";
+        
 
         //ASSIGNS FILENAMES
         String fileName1 = "Topic 1 Articles\\Center1.txt";
@@ -73,12 +79,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
-        System.out.println("------------------------------------------------------");
+        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
         System.out.println("Welcome to our Article Comperator!");
-        System.out.println("There should be three topic folders, each with three articles inside of them!");
+        System.out.println("There should be three topic folders, each with three articles inside of them!" + ANSI_RESET);
         
         while (!exit) {
-            System.out.println("------------------------------------------------------");
+            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
             System.out.println("");
             System.out.println("");
             System.out.println("Use the number keys to navigate the CLI");
@@ -88,13 +94,16 @@ public class Main {
             System.out.println("3: Topic 3 (Election)");
             System.out.println("4: Topic 4 (Custom Topic)");
             System.out.println("5: Exit");
-            System.out.print("Your Input: ");
+            System.out.print("Your Input: " + ANSI_RESET);
 
             int mainChoice = scanner.nextInt();
+            
+
+
             switch (mainChoice) {
             
                 case 1:
-                    System.out.println("------------------------------------------------------");
+                    System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                     System.out.println("You have selected Topic 1");
                     System.out.println("Select the option you want: ");
                     System.out.println("1: Word Count");
@@ -109,7 +118,8 @@ public class Main {
 
                     switch (topic1Choice) {
                         case 1:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("You have chosen to see the word count of Topic 1");
                             int wordCount1 = countWordsInArrayList(cleanArray1);
                             int wordCount2 = countWordsInArrayList(cleanArray2);
@@ -121,7 +131,8 @@ public class Main {
 
                             
                         case 2:
-                        System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("You have chosen to see the word frequency of Topic 1");
                             wordFrequency.countWordFrequencies(filteredArray1);
                             wordFrequency.countWordFrequencies(filteredArray2);
@@ -130,7 +141,8 @@ public class Main {
                             
                             
                         case 3:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("You have chosen to see the rich word count for Topic 1");
                             System.out.print("Topic 1 Article 1 ");
                             RichWordCount.countUniqueWordFrequency(filteredArray1);
@@ -141,7 +153,8 @@ public class Main {
                             break;
                             
                         case 4:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("You have chosen to see the list of repeated words for Topic 1");
                             System.out.print("10 Most Repeated Words for Topic 1 Article 1 ");
                             System.out.println(repeatedWords.findMostUsedWords(filteredArray1));
@@ -152,7 +165,8 @@ public class Main {
                             break;
 
                         case 5:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("You have chosen to see the sentiment analysis for Topic 1");
                             String overallSentiment1 = attitudeAnalyzer.analyzeSentiment(filteredArray1);
                             System.out.println("Topic 1, Article 1 Overall Sentiment: " + overallSentiment1);
@@ -166,17 +180,20 @@ public class Main {
                             break;
 
                         case 6:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("Exiting topic 1.");
                             break;
                         default:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                            System.out.println("You have selected Topic 1");
                             System.out.println("Invalid option. Please try again.");
                     }
                     break;
         
                     case 2:
-                    System.out.println("------------------------------------------------------");
+                    System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
+                    System.out.println("You have selected Topic 1");
                     System.out.println("You have selected Topic 2");
                     System.out.println("Select the option you want: ");
                     System.out.println("1: Word Count");
@@ -191,7 +208,7 @@ public class Main {
 
                     switch (topic2Choice) {
                         case 1:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the word count of Topic 2");
                             int wordCount4 = countWordsInArrayList(cleanArray4);
                             int wordCount5 = countWordsInArrayList(cleanArray5);
@@ -203,7 +220,7 @@ public class Main {
 
                             
                         case 2:
-                        System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the word frequency of Topic 2");
                             wordFrequency.countWordFrequencies(filteredArray4);
                             wordFrequency.countWordFrequencies(filteredArray5);
@@ -212,7 +229,7 @@ public class Main {
                             
                             
                         case 3:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the rich word count for Topic 2");
                             System.out.print("Topic 2 Article 1 ");
                             RichWordCount.countUniqueWordFrequency(filteredArray4);
@@ -223,7 +240,7 @@ public class Main {
                             break;
                             
                         case 4:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the list of repeated words for Topic 2");
                             System.out.print("10 Most Repeated Words for Topic 2 Article 1 ");
                             System.out.println(repeatedWords.findMostUsedWords(filteredArray4));
@@ -234,7 +251,7 @@ public class Main {
                             break;
 
                         case 5:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the sentiment analysis for Topic 2");
                             String overallSentiment4 = attitudeAnalyzer.analyzeSentiment(filteredArray4);
                             System.out.println("Topic 2, Article 1 Overall Sentiment: " + overallSentiment4);
@@ -247,18 +264,18 @@ public class Main {
                             break;
 
                         case 6:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("Exiting topic 2");
                             break;
                         default:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("Invalid option. Please try again.");
                     }
                     break;
 
 
                     case 3:
-                    System.out.println("------------------------------------------------------");
+                    System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                     System.out.println("You have selected Topic 3");
                     System.out.println("Select the option you want: ");
                     System.out.println("1: Word Count");
@@ -273,7 +290,7 @@ public class Main {
 
                     switch (topic3Choice) {
                         case 1:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the word count of Topic 3");
                             int wordCount7 = countWordsInArrayList(cleanArray7);
                             int wordCount8 = countWordsInArrayList(cleanArray8);
@@ -285,7 +302,7 @@ public class Main {
 
                             
                         case 2:
-                        System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the word frequency of Topic 3");
                             wordFrequency.countWordFrequencies(filteredArray7);
                             wordFrequency.countWordFrequencies(filteredArray8);
@@ -294,7 +311,7 @@ public class Main {
                             
                             
                         case 3:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the rich word count for Topic 3");
                             System.out.print("Topic 3 Article 1 ");
                             RichWordCount.countUniqueWordFrequency(filteredArray7);
@@ -305,7 +322,7 @@ public class Main {
                             break;
                             
                         case 4:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the list of repeated words for Topic 3");
                             System.out.print("10 Most Repeated Words for Topic 3 Article 1 ");
                             System.out.println(repeatedWords.findMostUsedWords(filteredArray7));
@@ -316,7 +333,7 @@ public class Main {
                             break;
 
                         case 5:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("You have chosen to see the sentiment analysis for Topic 3");
                             String overallSentiment7 = attitudeAnalyzer.analyzeSentiment(filteredArray7);
                             System.out.println("Topic 3, Article 1 Overall Sentiment: " + overallSentiment7);
@@ -329,18 +346,18 @@ public class Main {
                             break;
 
                         case 6:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("Exiting topic 3");
                             break;
                         default:
-                            System.out.println("------------------------------------------------------");
+                            System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                             System.out.println("Invalid option. Please try again.");
-                    }
+                    }  
                     break;
 
         
                 case 4:
-                System.out.println("------------------------------------------------------");
+                System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                 System.out.println("You have selected Custom Topic");
                 System.out.println("Select the option you want: ");
                 System.out.println("1: Word Count");
@@ -355,7 +372,7 @@ public class Main {
 
                 switch (topic4Choice) {
                     case 1:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("You have chosen to see the word count of Custom Articles");
                         int wordCountCustom1 = countWordsInArrayList(cleanArrayCustom1);
                         int wordCountCustom2 = countWordsInArrayList(cleanArrayCustom2);
@@ -367,7 +384,7 @@ public class Main {
 
                         
                     case 2:
-                    System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("You have chosen to see the word frequency of Custom Articles");
                         wordFrequency.countWordFrequencies(filteredArrayCustom1);
                         wordFrequency.countWordFrequencies(filteredArrayCustom2);
@@ -376,7 +393,7 @@ public class Main {
                         
                         
                     case 3:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("You have chosen to see the rich word count for Custom Articles");
                         System.out.print("Custom Articles: Article 1 ");
                         RichWordCount.countUniqueWordFrequency(filteredArrayCustom1);
@@ -387,7 +404,7 @@ public class Main {
                         break;
                         
                     case 4:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("You have chosen to see the list of repeated words for Custom Articles");
                         System.out.print("10 Most Repeated Words for Custom Articles: Article 1 ");
                         System.out.println(repeatedWords.findMostUsedWords(filteredArrayCustom1));
@@ -398,7 +415,7 @@ public class Main {
                         break;
 
                     case 5:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("You have chosen to see the sentiment analysis for Custom Articles");
                         String overallSentimentCustom1 = attitudeAnalyzer.analyzeSentiment(filteredArrayCustom1);
                         System.out.println("Custom Articles, Article 1 Overall Sentiment: " + overallSentimentCustom1);
@@ -411,11 +428,11 @@ public class Main {
                         break;
 
                     case 6:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("Exiting Custom Articles");
                         break;
                     default:
-                        System.out.println("------------------------------------------------------");
+                        System.out.println(ANSI_WHITE + "------------------------------------------------------" + ANSI_RESET);
                         System.out.println("Invalid option. Please try again.");
                 }
                 break;

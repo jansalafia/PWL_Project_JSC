@@ -6,6 +6,10 @@ import java.util.Comparator;
 
 public class WordFrequency {
 
+    final static String ANSI_RESET = "\u001B[0m";
+    final static String ANSI_GREEN = "\u001B[32m";
+    final static String ANSI_RED = "\u001B[31m";
+
     // Helper class to store word-frequency pairs
     class WordCount {
         String word;
@@ -51,7 +55,7 @@ public class WordFrequency {
 
         // Display sorted word frequencies
         for (WordCount wordCount : wordCountList) {
-            System.out.println(wordCount.word + ": " + wordCount.count);
+            System.out.println(ANSI_GREEN + wordCount.word + ": " + ANSI_RED + wordCount.count + ANSI_RESET);
 
         }
         System.out.println("--------------------------------------------------------------------");
